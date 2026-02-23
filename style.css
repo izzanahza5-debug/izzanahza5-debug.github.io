@@ -1,0 +1,166 @@
+/* Efek Glassmorphism untuk Navbar */
+.custom-navbar {
+  background: rgba(15, 23, 42, 0.85); /* Warna biru dongker sangat gelap & transparan */
+  backdrop-filter: blur(12px); /* Efek kaca buram */
+  -webkit-backdrop-filter: blur(12px); /* Support untuk browser Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Garis halus di bawah navbar */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efek Hover pada Link Menu */
+.navbar-nav .nav-link {
+  color: #adb5bd;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(13, 110, 253, 0.5); /* Efek glowing tipis */
+}
+
+/* Tambahan: Pastikan body punya padding agar konten tidak tertutup fixed navbar */
+body {
+  padding-top: 80px; 
+  background-color: #0f172a; /* Cocok dengan tema gelap navbar */
+  color: #f8f9fa;
+}
+#home {
+  background: radial-gradient(circle at 10% 20%, rgba(0, 98, 255, 0.1) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(0, 98, 255, 0.05) 0%, transparent 40%);
+}
+
+/* Animasi melayang untuk gambar */
+.floating-anim {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Kursor berkedip untuk efek mengetik */
+#typewriter::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+/* Teks Gradasi */
+.text-gradient {
+  background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Styling Stats Card */
+.stats-card {
+  transition: transform 0.3s ease;
+}
+.stats-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(13, 110, 253, 0.5) !important;
+}
+
+/* Feature Card Hover Effect */
+.feature-card {
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.07) !important;
+  transform: translateY(-10px);
+}
+
+/* Responsivitas untuk zigzag card di mobile */
+@media (max-width: 768px) {
+  .col-md-6.mt-md-5 {
+    margin-top: 0 !important;
+  }
+}
+/* Card Container Pengurus */
+.org-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(5px);
+}
+
+.org-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--bs-primary);
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.2);
+}
+
+/* Photo Styling */
+.profile-img-wrapper img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  padding: 5px;
+  background-color: transparent !important;
+}
+
+.profile-img-sm img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  padding: 3px;
+  background-color: transparent !important;
+}
+
+/* Tracking text style */
+.tracking-widest {
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+}
+
+/* Social Icon Hover */
+.social-links .btn:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: white;
+}
+.student-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.student-card:hover {
+  background: rgba(13, 110, 253, 0.1);
+  border-color: var(--bs-primary);
+  transform: translateY(-5px);
+}
+
+.student-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid rgba(13, 110, 253, 0.3);
+}
+
+/* Badge Spesialisasi TKJ */
+.badge-tkj {
+  font-size: 0.7rem;
+  background: rgba(13, 110, 253, 0.2);
+  color: #0dcaf0;
+  border: 1px solid rgba(13, 110, 253, 0.3);
+}
+
+.search-box input:focus {
+  border-color: var(--bs-primary) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+.input::placeholder {
+  color: rgb(185, 181, 181);
+  opacity: 1; /* Firefox memiliki opasitas default, perlu disetel ke 1 */
+}
